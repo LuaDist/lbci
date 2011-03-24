@@ -1,18 +1,20 @@
-# Copyright (C) 2007-2009 LuaDist.
+# Copyright (C) 2007-2011 LuaDist.
 # Created by Peter Kapec
 # Redistribution and use of this file is allowed according to the terms of the MIT license.
 # For details see the COPYRIGHT file distributed with LuaDist.
 # Please note that the package source code is licensed under its own license.
 
-PROJECT(lbci C)
-CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
-INCLUDE(dist.cmake)
+project ( lbci C )
+cmake_minimum_required ( VERSION 2.6 )
+include ( dist.cmake )
 
-INCLUDE_DIRECTORIES(lua51)
+include_directories ( lua51 )
 
-ADD_LUA_MODULE(bci lbci.c bci.def)
-ADD_LUA_TEST(test.lua)
+install_lua_module ( bci lbci.c bci.def )
+install_data ( README COPYRIGHT-LUA )
+install_test ( test.lua )
+install_test ( print.lua )
 
-INSTALL (TARGETS bci DESTINATION ${INSTALL_CMOD})
-INSTALL (FILES README COPYRIGHT-LUA DESTINATION ${INSTALL_DATA})
-INSTALL (FILES test.lua print.lua DESTINATION ${INSTALL_TEST})
+add_lua_test ( test.lua )
+# add_lua_test ( print.lua )  # FIX? assumes print.lua in current directory
+
