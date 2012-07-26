@@ -6,7 +6,8 @@
 
 project ( lbci C )
 cmake_minimum_required ( VERSION 2.6 )
-include ( dist.cmake )
+include ( cmake/dist.cmake )
+include ( lua )
 
 include_directories ( lua51 )
 
