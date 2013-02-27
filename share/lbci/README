@@ -1,0 +1,23 @@
+This is a bytecode inspector library for Lua 5.1. It allows you to look
+inside Lua functions from Lua.
+
+To try the library, just edit Makefile to reflect your installation of Lua and
+then run make. This will build the library and run a simple test. Note that
+this library needs inside information from the Lua private headers and so it
+needs to be built using a Lua build directory, not just the usual installation
+directories.
+
+There is no manual but the library is simple and intuitive; see the summary
+below. Read also test.lua and print.lua, which show the library in action.
+
+This code is hereby placed in the public domain.
+Please send comments, suggestions, and bug reports to lhf@tecgraf.puc-rio.br .
+
+-------------------------------------------------------------------------------
+
+inspector library:
+ getconstant(f,i) 	 getinstruction(f,i) 	 setconstant(f,i,v) 
+ getfunction(f,i) 	 getlocal(f,i) 
+ getheader(f,i) 	 getupvalue(f,i) 
+
+-------------------------------------------------------------------------------

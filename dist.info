@@ -1,0 +1,30 @@
+type = "x86_64"
+arch = "Ubuntu"
+author = "Luiz Henrique de Figueiredo"
+depends = {
+[[lua ~> 5.1]],
+}
+
+desc = "A bytecode inspector library for Lua 5.1. It allows you to look inside Lua functions from Lua."
+version = "5.1"
+maintainer = "Peter Kapec"
+files = {
+Runtime = {
+[[lib/lua/bci.so]],
+}
+,
+Data = {
+[[share/lbci/README]],
+[[share/lbci/COPYRIGHT-LUA]],
+}
+,
+Test = {
+[[share/lbci/test/test.lua]],
+[[share/lbci/test/print.lua]],
+}
+,
+}
+
+license = "Public domain (Lua 5.1.4 sources included in the dist are MIT)"
+name = "lbci"
+url = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/#lbci"
